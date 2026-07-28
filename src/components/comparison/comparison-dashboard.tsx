@@ -19,12 +19,17 @@ import {
   MAX_COMPARISON_USERS,
   MIN_COMPARISON_USERS,
 } from "@/constants";
+import dynamic from "next/dynamic";
 import { ComparisonTable } from "./comparison-table";
 import type { ComparisonUserData } from "./comparison-table";
-import { ComparisonCharts } from "./comparison-charts";
 import { exportToCSV } from "@/utils/export";
 import { calculateAcceptanceRate } from "@/utils/calculations";
 import { toast } from "sonner";
+
+const ComparisonCharts = dynamic(
+  () => import("./comparison-charts").then((m) => m.ComparisonCharts),
+  { ssr: false }
+);
 
 // ============================================================
 // Loading Skeleton

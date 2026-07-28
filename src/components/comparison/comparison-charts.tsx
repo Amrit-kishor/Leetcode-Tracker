@@ -16,57 +16,21 @@ import type {
   SubmissionCalendar,
 } from "@/types/leetcode";
 
-// ============================================================
-// Dynamic Recharts Imports (SSR-safe)
-// ============================================================
-
-const ResponsiveContainer = dynamic(
-  () => import("recharts").then((m) => m.ResponsiveContainer),
-  { ssr: false }
-);
-const RadarChart = dynamic(
-  () => import("recharts").then((m) => m.RadarChart),
-  { ssr: false }
-);
-const PolarGrid = dynamic(
-  () => import("recharts").then((m) => m.PolarGrid),
-  { ssr: false }
-);
-const PolarAngleAxis = dynamic(
-  () => import("recharts").then((m) => m.PolarAngleAxis),
-  { ssr: false }
-);
-const PolarRadiusAxis = dynamic(
-  () => import("recharts").then((m) => m.PolarRadiusAxis),
-  { ssr: false }
-);
-const Radar = dynamic(() => import("recharts").then((m) => m.Radar), {
-  ssr: false,
-});
-const BarChart = dynamic(
-  () => import("recharts").then((m) => m.BarChart),
-  { ssr: false }
-);
-const Bar = dynamic(() => import("recharts").then((m) => m.Bar), {
-  ssr: false,
-});
-const XAxis = dynamic(() => import("recharts").then((m) => m.XAxis), {
-  ssr: false,
-});
-const YAxis = dynamic(() => import("recharts").then((m) => m.YAxis), {
-  ssr: false,
-});
-const CartesianGrid = dynamic(
-  () => import("recharts").then((m) => m.CartesianGrid),
-  { ssr: false }
-);
-const Tooltip = dynamic(
-  () => import("recharts").then((m) => m.Tooltip),
-  { ssr: false }
-);
-const Legend = dynamic(() => import("recharts").then((m) => m.Legend), {
-  ssr: false,
-});
+import {
+  ResponsiveContainer,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+} from "recharts";
 
 // ============================================================
 // Types
